@@ -5,5 +5,7 @@
 
 def best_score(a_dictionary):
     if a_dictionary:
-        sorted_kyes = sorted(list(a_dictionary.keys()), reverse=True)
-        return (sorted_kyes[0])
+        best_key = max(a_dictionary, key=a_dictionary.get)
+        return best_key
+    else:
+        return None
